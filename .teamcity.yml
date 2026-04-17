@@ -17,7 +17,7 @@ jobs:
           value: Linux
     features:
       - type: free-disk-space
-        required-space: ''
+        required-space: '-9'
   Job1clone:
     name: Job 1 clone
     steps:
