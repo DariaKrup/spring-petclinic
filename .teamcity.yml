@@ -15,6 +15,9 @@ jobs:
           name: OS
           parameter: teamcity.agent.jvm.os.name
           value: Linux
+    features:
+      - type: free-disk-space
+        required-space: ''
   Job1clone:
     name: Job 1 clone
     steps:
