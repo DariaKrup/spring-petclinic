@@ -15,3 +15,19 @@ jobs:
           name: OS
           parameter: teamcity.agent.jvm.os.name
           value: Linux
+  Job1clone:
+    name: Job 1 clone
+    steps:
+      - type: maven
+        maven-version: defaultProvidedVersion
+        pom-location: pom.xml
+        name: clean test
+        goals: clean test
+    parallelism: 2
+    allow-reuse: false
+    runs-on:
+      self-hosted:
+        - requirement: equals
+          name: OS
+          parameter: teamcity.agent.jvm.os.name
+          value: Linux
